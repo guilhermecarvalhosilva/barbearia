@@ -1,0 +1,67 @@
+.sobre {
+    @include flexBox(row, space-around, center);
+    gap: 0px 30px;
+    background-color: $corAzul01;
+    width: 100%;
+    height: 80vh;
+}
+
+
+.imagem {
+    max-width: 550px;
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.escrito-sobre {
+    @include flexBox(column, center, left);
+    gap: 15px 0px;
+    max-width: 600px;
+
+    .titulo {
+        font-size: 2.9em;
+        color: $corBranco;
+    }
+
+    .paragrafo {
+        font-size: 1em;
+        font-weight: 400;
+        color: white;
+    }
+}
+
+@media(max-width: 1240px) {
+    .sobre {
+        height: auto;
+        padding: 20px 0px;
+        @include flexBox(column-reverse, center, center);
+        gap: 50px 0px;
+    }
+
+    .imagem {
+        @include flexBox(row, center, center);
+        
+        img{
+        width: 90%;
+        }
+    }
+    
+
+    .escrito-sobre {
+        text-align: center;
+
+        .paragrafo {
+            width: 90%;
+            margin: auto;
+        }
+    } 
+}
+
+@media(max-width: 360px) {
+    .escrito-sobre .paragrafo {
+        font-size: 0.9em;
+    } 
+}

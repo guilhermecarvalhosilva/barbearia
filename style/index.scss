@@ -1,0 +1,24 @@
+
+@import 'funcoes';
+@import 'variaveis';
+@import 'principal';
+@import 'sobre';
+@import 'servicos';
+@import 'venhaConhecer';
+@import 'rodape';
+
+
+
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: $font-padrao;
+}
+
+body {
+    max-width: 2000px;
+    margin: auto;
+}
