@@ -1,24 +1,52 @@
+@charset 'UTF-8';
 
-@import 'funcoes';
-@import 'variaveis';
-@import 'principal';
-@import 'sobre';
-@import 'servicos';
-@import 'venhaConhecer';
-@import 'rodape';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-
+@import '../sass/variaveis';
+@import '../sass/principal';
+@import '../sass/sobre';
+@import '../sass/servicos';
+@import '../sass/conhecer';
+@import '../sass/rodape';
 
 
 * {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    font-family: $font-padrao;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
-    max-width: 2000px;
+    background: $cor-azul03;
+    max-width: 2500px;
+    width: 100%;
     margin: auto;
+}
+
+.conteudo {
+    width: 100%;
+    height: auto;
+    @include flexbox(column, center, center);
+}
+
+.icone {
+    z-index: 999;
+    box-shadow: 0px 0px 10px $cor-verde01;
+    cursor: pointer;
+    background: $cor-verde01;
+    border: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    @include flexbox(row, center, center);
+
+    i {
+        font-size: 2.2em;
+        color: $cor-branco;
+    }
 }

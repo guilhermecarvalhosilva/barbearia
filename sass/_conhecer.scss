@@ -1,0 +1,24 @@
+.conhcer {
+    background-color: $cor-branco;
+    width: 100%;
+    height: auto;
+    padding: 35px 0px 0px 0px;
+    @include flexbox(column, center, center);
+    gap: 30px 0px;
+
+    .titulo {
+        width: 90%;
+        font-size: 2.7em;
+        text-align: center;
+    }
+
+    .mapa {
+        width: 100%;
+        height: 500px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

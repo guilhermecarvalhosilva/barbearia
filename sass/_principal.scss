@@ -1,0 +1,154 @@
+.principal {
+    background: linear-gradient(180deg, #06121E 0%, rgba(6, 18, 30, 0.37) 36.74%, rgba(6, 18, 30, 0.29) 69.61%, #06121E 100%), url('../assets/fundo-background.png');
+    width: 100%;
+    height: auto;
+    padding: 35px 0px;
+    @include flexbox(column, center, center);
+    gap: 60px 0px;
+    width: 100%;
+}
+
+.cabecalho {
+    @include flexbox(row, space-between, none);
+    width: 95%;
+    height: auto;
+
+    .menu {
+        @include flexbox(row, flex-start, none);
+        max-width: 180px;
+        width: 100%;
+        gap: 0px 35px;
+
+        .menu-item {
+            color: $cor-branco;
+            font-size: 1.6em;
+            transition: 0.3s;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+    .imagem {
+        max-width: 170px;
+        width: 100%;
+        @include flexbox(row, center, center);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .botao {
+        cursor: pointer;
+        background: transparent;
+        border: 3px solid $cor-branco;
+        border-radius: 5px;
+        max-width: 160px;
+        width: 100%;
+        height: 60px;
+        color: $cor-branco;
+        font-size: 0.9em;
+        font-weight: 500;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: $cor-vermelho01;
+            border-color: $cor-vermelho01;
+        }
+    }
+}
+
+.informacoes {
+    @include flexbox(column, center, center);
+    gap: 30px 0px;
+
+    .titulo {
+        color: $cor-branco;
+        font-size: 3em;
+        max-width: 860px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .paragrafo {
+        font-size: 1.2em;
+        color: $cor-branco;
+        font-weight: 500;
+    }
+
+    .botao-agendar {
+        cursor: pointer;
+        background-color: $cor-vermelho01;
+        border: none;
+        max-width: 250px;
+        width: 100%;
+        height: 60px;
+        border-radius: 5px;
+        color: $cor-branco;
+        font-size: 1em;
+        font-weight: 500;
+        transition: 0.3s;
+
+        &:hover {
+           opacity: 0.8;
+        }
+    }
+}
+
+@media(max-width: 760px) {
+    .principal {
+        gap: 50px 0px;
+    }
+    .cabecalho .botao {
+        display: none;
+    }
+
+    .cabecalho {
+        @include flexbox(column, center, center);
+        gap: 30px 0px;
+    }
+
+    .cabecalho .menu  {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 600px) {
+    .informacoes .titulo {
+        font-size: 2.2em;
+    }
+}
+
+@media(max-width: 470px) {
+    .cabecalho .imagem {
+        max-width: 140px;
+    }
+
+
+    .informacoes .titulo {
+        font-size: 2em;
+    }
+
+    .informacoes .paragrafo {
+        font-size: 1em;
+        width: 90%;
+        text-align: center;
+    }
+
+    .informacoes .botao-agendar {
+        max-width: 200px;
+    }
+}
+
+@media(max-width: 350px) {
+    .informacoes .titulo {
+        font-size: 1.6em;
+    }
+
+    .informacoes .paragrafo {
+        font-size: 0.9em;
+
+    }
+}

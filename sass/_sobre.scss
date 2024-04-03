@@ -1,0 +1,59 @@
+.sobre {
+    width: 90%;
+    height: auto;
+    padding: 45px 0px;
+    @include flexbox(row, space-around, center);
+    gap: 0px 30px;
+
+    .imagem {
+        max-width: 500px;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .escrito {
+        max-width: 650px;
+        @include flexbox(column, center, flex-start);
+        gap: 15px 0px;
+
+        .titulo {
+            color: $cor-branco;
+            font-size: 2.7em;
+        }
+
+        .paragrafo,
+        .horario  {
+            width: 100%;
+            color: $cor-branco;
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+    }
+}
+
+@media(max-width: 1190px) {
+    .sobre {
+        flex-direction: column;
+        gap: 45px 0px;
+    }
+
+    .sobre .imagem {
+        max-width: 460px;
+    }
+}
+
+@media(max-width: 500px) {
+    .sobre .escrito .paragrafo {
+        font-size: 0.9em;
+        line-height: 2.1em;
+    } 
+    .sobre .escrito .horario {
+        font-size: 0.9em;
+    
+    }
+}
+
+

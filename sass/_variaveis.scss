@@ -1,0 +1,17 @@
+$cor-azul01: #0c2135;
+$cor-azul02: #040f1a;
+$cor-azul03: #06121E;
+$cor-preto01: #161617;
+$cor-preto02: #353436;
+$cor-preto03: #232224;
+$cor-branco: #fff;
+$cor-vermelho01: #D94140;
+$cor-verde01: #00A884;
+$cor-cinza01: #ccc;
+
+@mixin flexbox($direction, $content, $items) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $items;
+}
